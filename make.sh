@@ -6,7 +6,10 @@ CUR_DIR=$PWD
 SRC_DIR=$PWD
 BIN_DIR=$PWD/bin
 CONF_DIR=$PWD/config
-FLAGS=-race
+
+if [[ $1 != "" ]]; then
+    FLAGS=$1
+fi
 
 export GOPROXY=https://goproxy.io
 cd $SRC_DIR
