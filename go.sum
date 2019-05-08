@@ -8,8 +8,9 @@ github.com/coreos/go-semver v0.2.0/go.mod h1:nnelYz7RCh+5ahJtPPxZlU+153eP4D4r3Ee
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/fananchong/glog v0.0.0-20190224032502-d814c6adef29/go.mod h1:GEGZvOvgIeNNhzjxczz39fvYeYwhrRVyfYB+n3GcFeo=
 github.com/fananchong/go-redis-orm.v2 v0.0.0-20190224024744-b3158985225c/go.mod h1:HgSap/1Tq/6LazUQ/g4R25n0GgArz3eDdu3NM8ddEU8=
-github.com/fananchong/go-xserver v0.0.0-20190504113146-db2e664367b0 h1:YmqMCuG5xbkM9Nhq0sIwChpPkdXlDfZRLLJ2EuY3dh0=
-github.com/fananchong/go-xserver v0.0.0-20190504113146-db2e664367b0/go.mod h1:lAv9EAKsSqgEgOV2+kQOg3ucUjujLDAyhRBfr6QBK6U=
+github.com/fananchong/go-xserver v0.0.0-20190504100746-3701aba42ec3 h1:mq1H1IjUcY7WwJO17LiQoRpV6h24Gxw7VK+Zt0mzPNc=
+github.com/fananchong/go-xserver v0.0.0-20190508092127-34e900575c70 h1:EbgqiuHl3WNgHWeG4lPSOnyQNqr97FC5DwkJbBun3io=
+github.com/fananchong/go-xserver v0.0.0-20190508092127-34e900575c70/go.mod h1:lAv9EAKsSqgEgOV2+kQOg3ucUjujLDAyhRBfr6QBK6U=
 github.com/fananchong/goredis v0.0.0-20181224141957-8c4a4601c4c9/go.mod h1:5LLIOz1tkD4ZKNwGVP2Ns9DlF4bCPsi3a5J7GkwuJQo=
 github.com/fananchong/gotcp v0.0.0-20190303060523-5b9bc29d0bfb h1:vW+ZsoypSIvoJNeiGdH6LQKIT6uh0Gd73Wbuk3o+6XE=
 github.com/fananchong/gotcp v0.0.0-20190303060523-5b9bc29d0bfb/go.mod h1:NwqSPUhE3lftRXXTbIYO3aSdkdQSs2gCGIZA4Mi1B6c=
