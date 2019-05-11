@@ -28,7 +28,7 @@ func (gateway *Gateway) Close() {
 func (gateway *Gateway) sendToClient(account string, cmd uint64, data []byte) bool {
 	if user := gateway.GetUser(account); user != nil {
 		datalen := len(data) - 1
-		if user.SendEx(int(cmd), data[:datalen], data[datalen]) {
+		if user.Send(data[:datalen], data[datalen]) {
 			return true
 		}
 		Ctx.Warning("Sending message failed, account:", account, ", cmd:", cmd)
@@ -43,7 +43,7 @@ func (gateway *Gateway) sendToAllClient(cmd uint64, data []byte) bool {
 	msg := data[:datalen]
 	flag := data[datalen]
 	gateway.Foreach(func(user *User) bool {
-		if user.SendEx(int(cmd), msg, flag) == false {
+		if user.Send(msg, flag) == false {
 			Ctx.Warning("Sending message failed, account:", user.GetAccount(), ", cmd:", cmd)
 		}
 		return true
