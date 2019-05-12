@@ -9,8 +9,9 @@ github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSs
 github.com/fananchong/glog v0.0.0-20190224032502-d814c6adef29/go.mod h1:GEGZvOvgIeNNhzjxczz39fvYeYwhrRVyfYB+n3GcFeo=
 github.com/fananchong/go-redis-orm.v2 v0.0.0-20190224024744-b3158985225c/go.mod h1:HgSap/1Tq/6LazUQ/g4R25n0GgArz3eDdu3NM8ddEU8=
 github.com/fananchong/go-xserver v0.0.0-20190504100746-3701aba42ec3 h1:mq1H1IjUcY7WwJO17LiQoRpV6h24Gxw7VK+Zt0mzPNc=
-github.com/fananchong/go-xserver v0.0.0-20190508092127-34e900575c70 h1:EbgqiuHl3WNgHWeG4lPSOnyQNqr97FC5DwkJbBun3io=
-github.com/fananchong/go-xserver v0.0.0-20190508092127-34e900575c70/go.mod h1:lAv9EAKsSqgEgOV2+kQOg3ucUjujLDAyhRBfr6QBK6U=
+github.com/fananchong/go-xserver v0.0.0-20190504100746-3701aba42ec3/go.mod h1:lAv9EAKsSqgEgOV2+kQOg3ucUjujLDAyhRBfr6QBK6U=
+github.com/fananchong/go-xserver v0.0.0-20190512235507-63624ecaf03f h1:3XANggAI1cWgRuw+o1Qy9j0phbfzin3IZs0GE3nLJk0=
+github.com/fananchong/go-xserver v0.0.0-20190512235507-63624ecaf03f/go.mod h1:DoC4yCfqaIg9vyjErcGiC3/dxdokQAyIM04IVCw5w3c=
 github.com/fananchong/goredis v0.0.0-20181224141957-8c4a4601c4c9/go.mod h1:5LLIOz1tkD4ZKNwGVP2Ns9DlF4bCPsi3a5J7GkwuJQo=
 github.com/fananchong/gotcp v0.0.0-20190303060523-5b9bc29d0bfb h1:vW+ZsoypSIvoJNeiGdH6LQKIT6uh0Gd73Wbuk3o+6XE=
 github.com/fananchong/gotcp v0.0.0-20190303060523-5b9bc29d0bfb/go.mod h1:NwqSPUhE3lftRXXTbIYO3aSdkdQSs2gCGIZA4Mi1B6c=
@@ -35,6 +36,7 @@ github.com/spf13/cobra v0.0.3/go.mod h1:1l0Ry5zgKvJasoi3XT1TypsSe7PqH0Sj9dhYf7v3
 github.com/spf13/jwalterweatherman v1.0.0/go.mod h1:cQK4TGJAtQXfYWX+Ddv3mKDzgVb68N+wFjFa4jdeBTo=
 github.com/spf13/pflag v1.0.3/go.mod h1:DYY7MBk1bdzusC3SYhjObp+wFpr4gzcvqqNjLnInEg4=
 github.com/spf13/viper v1.3.1/go.mod h1:ZiWeW+zYFKm7srdB9IoDzzZXaJaI5eL9QjNiN/DMA2s=
+github.com/spf13/viper v1.3.2/go.mod h1:ZiWeW+zYFKm7srdB9IoDzzZXaJaI5eL9QjNiN/DMA2s=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
 github.com/ugorji/go/codec v0.0.0-20181204163529-d75b2dcb6bc8/go.mod h1:VFNgLljTbGfSG7qAOspJ7OScBnGdDN/yBr0sguwnwf0=
 github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77/go.mod h1:aYKd//L2LvnjZzWKhF00oedf4jCCReLcmhLdhm1A27Q=

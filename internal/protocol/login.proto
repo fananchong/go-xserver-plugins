@@ -39,4 +39,5 @@ message MSG_LOGIN_RESULT {
     repeated string Address = 3;            // IP 列表
     repeated int32 Port = 4;                // 端口列表
     repeated int32 NodeTyps = 5;            // 服务类型列表
+    repeated int32 NodeIDs = 6;             // 服务类型列表
 }

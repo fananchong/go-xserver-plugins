@@ -54,7 +54,7 @@ func (user *User) doVerify(cmd protocol.CMD_LOGIN_ENUM, data []byte, flag byte) 
 func (user *User) doLogin(account, passwd string, mode protocol.ENUM_LOGIN_MODE_ENUM, userdata []byte) {
 	Ctx.Infoln("account =", account, "password =", passwd, "mode =", mode)
 	user.account = account
-	token, addrs, ports, nodeTypes, errCode := Ctx.Login(account, passwd, mode == protocol.ENUM_LOGIN_MODE_DEFAULT, userdata)
+	token, addrs, ports, nodeTypes, nodeIDs, errCode := Ctx.Login(account, passwd, mode == protocol.ENUM_LOGIN_MODE_DEFAULT, userdata)
 	if errCode == context.LoginSuccess {
 		Ctx.Infoln("account =", account, "token =", token, "addr =", addrs, "port =", ports, "nodeTypes =", nodeTypes)
 		msg := &protocol.MSG_LOGIN_RESULT{}
@@ -64,6 +64,9 @@ func (user *User) doLogin(account, passwd string, mode protocol.ENUM_LOGIN_MODE_
 		msg.Port = append(msg.Port, ports...)
 		for _, v := range nodeTypes {
 			msg.NodeTyps = append(msg.NodeTyps, int32(v))
+		}
+		for _, v := range nodeIDs {
+			msg.NodeIDs = append(msg.NodeIDs, int32(v))
 		}
 		user.SendMsg(uint64(protocol.CMD_LOGIN_LOGIN), msg)
 	} else {
