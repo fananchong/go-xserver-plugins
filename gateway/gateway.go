@@ -25,10 +25,9 @@ func (gateway *Gateway) Close() {
 
 }
 
-func (gateway *Gateway) sendToClient(account string, cmd uint64, data []byte) bool {
+func (gateway *Gateway) sendToClient(account string, cmd uint64, data []byte, flag uint8) bool {
 	if user := gateway.GetUser(account); user != nil {
-		datalen := len(data) - 1
-		if user.SendEx(int(cmd), data[:datalen], data[datalen]) {
+		if user.SendEx(int(cmd), data, flag) {
 			return true
 		}
 		Ctx.Warning("Sending message failed, account:", account, ", cmd:", cmd)
@@ -38,12 +37,9 @@ func (gateway *Gateway) sendToClient(account string, cmd uint64, data []byte) bo
 	return false
 }
 
-func (gateway *Gateway) sendToAllClient(cmd uint64, data []byte) bool {
-	datalen := len(data) - 1
-	msg := data[:datalen]
-	flag := data[datalen]
+func (gateway *Gateway) sendToAllClient(cmd uint64, data []byte, flag uint8) bool {
 	gateway.Foreach(func(user *User) bool {
-		if user.SendEx(int(cmd), msg, flag) == false {
+		if user.SendEx(int(cmd), data, flag) == false {
 			Ctx.Warning("Sending message failed, account:", user.GetAccount(), ", cmd:", cmd)
 		}
 		return true

@@ -26,8 +26,7 @@ func (user *User) OnRecv(data []byte, flag byte) {
 	case protocol.CMD_GATEWAY_VERIFY_TOKEN:
 		// No need to do anything
 	default:
-		data = append(data, flag)
-		if Ctx.OnRecvFromClient(user.account, uint32(cmd), data) == false {
+		if Ctx.OnRecvFromClient(user.account, uint32(cmd), data, flag) == false {
 			Ctx.Errorln("Unknown message number, message number is", cmd, "account:", user.account)
 			user.Close()
 		}
