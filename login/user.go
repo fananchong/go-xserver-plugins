@@ -15,6 +15,7 @@ type User struct {
 // OnRecv : 接收到网络数据包，被触发
 func (user *User) OnRecv(data []byte, flag byte) {
 	cmd := gotcp.GetCmd(data)
+	data = gotcp.GetData(data)
 	if user.IsVerified() == false && user.doVerify(protocol.CMD_LOGIN_ENUM(cmd), data, flag) == false {
 		return
 	}
@@ -40,7 +41,7 @@ func (user *User) doVerify(cmd protocol.CMD_LOGIN_ENUM, data []byte, flag byte) 
 		return false
 	}
 	msg := &protocol.MSG_LOGIN{}
-	if gotcp.DecodeCmd(data, flag, msg) == nil {
+	if gotcp.Decode(data, flag, msg) == nil {
 		Ctx.Errorln("Message parsing failed, message number is`protocol.CMD_LOGIN_LOGIN`(", int(protocol.CMD_LOGIN_LOGIN), ")")
 		user.Close()
 		return false

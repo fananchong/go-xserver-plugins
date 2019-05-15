@@ -19,6 +19,7 @@ func (user *User) OnRecv(data []byte, flag byte) {
 		return
 	}
 	cmd := gotcp.GetCmd(data)
+	data = gotcp.GetData(data)
 	if user.IsVerified() == false && user.doVerify(protocol.CMD_GATEWAY_ENUM(cmd), data, flag) == false {
 		return
 	}
@@ -46,7 +47,7 @@ func (user *User) doVerify(cmd protocol.CMD_GATEWAY_ENUM, data []byte, flag byte
 		return false
 	}
 	msg := &protocol.MSG_GATEWAY_VERIFY_TOKEN{}
-	if gotcp.DecodeCmd(data, flag, msg) == nil {
+	if gotcp.Decode(data, flag, msg) == nil {
 		Ctx.Errorln("Message parsing failed, message number is`protocol.CMD_GATEWAY_VERIFY_TOKEN`(", int(protocol.CMD_GATEWAY_VERIFY_TOKEN), ")")
 		user.Close()
 		return false
